@@ -9,7 +9,9 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app" v-text="myText">
+  <div id="app">
+    <p>{{ myPrice * 1.08 }}</p>
+    <p>{{ myName.substr(0,1) }}</p>
   </div>
 
   <script>
@@ -17,6 +19,8 @@
       el: '#app',
       data: {
         myText:'hello',
+        myPrice: 500,
+        myName: '桃太郎',
       },
       methods: {
         countUp: function() {
