@@ -12,6 +12,7 @@
   <div id="app">
     <p>{{ myPrice * 1.08 }}</p>
     <p>{{ myName.substr(0,1) }}</p>
+    <p>{{ myArray[0] }}</p>
   </div>
 
   <script>
@@ -21,6 +22,7 @@
         myText:'hello',
         myPrice: 500,
         myName: '桃太郎',
+        myArray: ['ダージリン', 'アールグレイ', 'セイロン'],
       },
       methods: {
         countUp: function() {
