@@ -7,10 +7,12 @@
   <title>Vue.js</title>
 </head>
 <body>
+  <div id="app">
+    <p v-pre>{{ message }}</p>
+    <p v-text="message"></p>
+    <a v-bind:href="url">media connect</a>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
 </body>
 </html>
