@@ -11,6 +11,14 @@
     <p v-pre>{{ message }}</p>
     <p v-text="message"></p>
     <a v-bind:href="url">media connect</a>
+    <p>{{ email.split('@')[0].toLowerCase() }}</p>
+    <p>{{ localEmail }}</p>
+    <form action="">
+      <input type="button" :value="message" v-on:click="onclick">
+    </form>
+    <div>算出: {{ random }}</div>
+    <div>メソッド{{ randomm() }}</div>
+    <div>現在自国 {{ current }}</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
