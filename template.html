@@ -18,7 +18,10 @@
     </form>
     <div>算出: {{ random }}</div>
     <div>メソッド{{ randomm() }}</div>
-    <div>現在自国 {{ current }}</div>
+    <div>現在時刻 {{ current }}</div>
+    <br>
+    <br>
+    <div>現在時刻 {{ cur.toLocaleString() }}</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
