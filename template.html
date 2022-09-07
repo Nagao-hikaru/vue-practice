@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="app">
-    <p v-pre>{{ message }}</p>
+    <!-- <p v-pre>{{ message }}</p>
     <p v-text="message"></p>
     <a v-bind:href="url">media connect</a>
     <p>{{ email.split('@')[0].toLowerCase() }}</p>
@@ -21,7 +21,11 @@
     <div>現在時刻 {{ current }}</div>
     <br>
     <br>
-    <div>現在時刻 {{ cur.toLocaleString() }}</div>
+    <div>現在時刻 {{ cur.toLocaleString() }}</div> -->
+    <label for="">名前
+      <input type="text" v-model="name">
+    </label>
+    <p>入力された値：{{ upperName}}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
