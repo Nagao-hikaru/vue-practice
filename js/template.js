@@ -8,6 +8,7 @@ Vue.createApp({
       cur: new Date().toLocaleString(),
       name: '',
       upperName: '',
+      path : 'https://www.web-deli.com/image/linkbanner_1.gif',
     };
   },
   // renderTracked(e) {
@@ -38,6 +39,12 @@ Vue.createApp({
     },
     onclick() {
       this.message = new Date().toLocaleString();
+    },
+    onmousesenter() {
+      this.path = 'https://www.web-deli.com/image/home_chara.gif';
+    },
+    onmouseleave() {
+      this.path = 'https://www.web-deli.com/image/linkbanner.gif';
     }
   },
   created() {
