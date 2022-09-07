@@ -36,19 +36,12 @@ Vue.createApp({
     getUpper() {
       this.upperName = this.name.toUpperCase();
     },
-  },
-  created() {
-    // this.timer = setInterval(() => {
-    //   this.cur = new Date()
-    // }, 1000),
-    this.delayFunc = _.debounce(this.getUpper, 2000);
-  },
-  watch: {
-    name(newValue, oldValue) {
-      this.delayFunc();
+    onclick() {
+      this.message = new Date().toLocaleString();
     }
   },
-  beforeUnmount() {
-    clearInterval(this.timer)
-  }
+  created() {
+  },
+  watch: {
+  },
 }).mount('#app');
