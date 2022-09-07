@@ -10,7 +10,7 @@
   <div id="app">
     <button v-on:click="onclick">クリック</button>
     <p>{{ message }}</p>
-    <img v-bind:src="path" src="" alt="ロゴ属性" v-on:onmousesenter="onmousesenter" @mouseleave="onmouseleave">
+    <img v-bind:src="path" :alt="alt" v-on:onmousesenter="onmousesenter" @mouseleave="onmouseleave" @error="onerror">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>

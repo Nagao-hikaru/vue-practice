@@ -9,6 +9,7 @@ Vue.createApp({
       name: '',
       upperName: '',
       path : 'https://www.web-deli.com/image/linkbanner_1.gif',
+      alt : ''
     };
   },
   // renderTracked(e) {
@@ -45,6 +46,12 @@ Vue.createApp({
     },
     onmouseleave() {
       this.path = 'https://www.web-deli.com/image/linkbanner.gif';
+    },
+    onerror() {
+      this.alt = 'エラー'
+    },
+    onclick(e) {
+      console.log(e.type)
     }
   },
   created() {
