@@ -7,19 +7,11 @@ Vue.createApp({
       current: new Date().toLocaleString(),
       cur: new Date().toLocaleString(),
       name: '',
-      upperName: '',
+      myName: '',
       path : 'https://www.web-deli.com/image/linkbanner_1.gif',
       alt : ''
     };
   },
-  // renderTracked(e) {
-  //   console.log('renderTracked')
-  //   console.log(e)
-  // },
-  // renderTriggered(e) {
-  //   console.log('renderTri')
-  //   console.log(e)
-  // },
   computed: {
     localEmail() {
       return this.email.split('@')[0].toLowerCase();
@@ -29,30 +21,6 @@ Vue.createApp({
     }
   },
   methods: {
-    onclick() {
-      this.current = new Date().toLocaleString();
-    },
-    randomm: function () {
-      return Math.random();
-    },
-    getUpper() {
-      this.upperName = this.name.toUpperCase();
-    },
-    onclick() {
-      this.message = new Date().toLocaleString();
-    },
-    onmousesenter() {
-      this.path = 'https://www.web-deli.com/image/home_chara.gif';
-    },
-    onmouseleave() {
-      this.path = 'https://www.web-deli.com/image/linkbanner.gif';
-    },
-    onerror() {
-      this.alt = 'エラー'
-    },
-    onclick(e) {
-      console.log(e.type)
-    }
   },
   created() {
   },

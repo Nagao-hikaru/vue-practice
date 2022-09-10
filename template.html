@@ -8,9 +8,11 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:click="onclick">クリック</button>
-    <p>{{ message }}</p>
-    <img v-bind:src="path" :alt="alt" v-on:onmousesenter="onmousesenter" @mouseleave="onmouseleave" @error="onerror">
+    <form action="">
+      <label for="name">氏名：</label>
+      <input type="text" id="name" v-model="myName">
+    </form>
+    <div>こんにちは、{{ myName }}さん</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
