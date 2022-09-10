@@ -7,9 +7,10 @@ Vue.createApp({
       current: new Date().toLocaleString(),
       cur: new Date().toLocaleString(),
       name: '',
-      myName: '',
-      path : 'https://www.web-deli.com/image/linkbanner_1.gif',
-      alt : ''
+      os: [
+        'Windows',
+        'macOS',
+      ]
     };
   },
   computed: {

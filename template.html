@@ -9,10 +9,17 @@
 <body>
   <div id="app">
     <form action="">
-      <label for="name">氏名：</label>
-      <input type="text" id="name" v-model="myName">
+      <div>お使いのOSは？</div>
+      <label for="windows">Windows</label>
+      <input type="checkbox" id="windows" value="Windows" v-model="os">
+      <label for="linux">Windows</label>
+      <input type="checkbox" id="linux" value="Linux" v-model="os">
+      <label for="mac">Windows</label>
+      <input type="checkbox" id="mac" value="macOS" v-model="os">
     </form>
-    <div>こんにちは、{{ myName }}さん</div>
+    <p>回答:
+    {{ os }}
+    </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
