@@ -10,7 +10,8 @@ Vue.createApp({
       os: [
         'Windows',
         'macOS',
-      ]
+      ],
+      kazu: {},
     };
   },
   computed: {
@@ -22,6 +23,11 @@ Vue.createApp({
     }
   },
   methods: {
+    onchange() {
+    },
+    changeColor() {
+      this.$refs.reftest.style.background = '#0FF'
+    }
   },
   created() {
   },
