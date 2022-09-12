@@ -13,6 +13,23 @@
       <input type="text" v-model.lazy="name">
       {{ name }}
     </div>
+    <form action="">
+      <label for="show">表示/非表示</label>
+      <input type="checkbox" id="show" v-model="show">
+    </form>
+    <div id="panel" v-if="show">
+      <h3>RSSフィードについて</h3>
+      <div>WINGSでは、弊社執筆の書籍/雑誌/web記事の最新50件を。。。</div>
+    </div>
+    <div v-else>現在非表示です。</div>
+    <table class="table">
+      <th>ISBN</th><th>署名</th><th>価格</th>
+      <tr v-for="b in expensiveBooks">
+        <td>{{ b.isbn }}</td>
+        <td>{{ b.title }}</td>
+        <td>{{ b.price }}</td>
+      </tr>
+    </table>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>

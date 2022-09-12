@@ -11,7 +11,29 @@ Vue.createApp({
         'Windows',
         'macOS',
       ],
-      kazu: {},
+      show: true,
+      books: [
+        {
+          isbn: '978',
+          title: 'Java勉強',
+          price: 2800,
+        },
+        {
+          isbn: '928',
+          title: 'python勉強',
+          price: 2501,
+        },
+        {
+          isbn: '9738',
+          title: 'php勉強',
+          price: 2400,
+        },
+        {
+          isbn: '958',
+          title: 'ruby勉強',
+          price: 2500,
+        },
+      ]
     };
   },
   computed: {
@@ -20,6 +42,10 @@ Vue.createApp({
     },
     random: function () {
       return Math.random();
+    },
+    expensiveBooks: function () {
+      
+      return this.books.filter(b => b.price >= 2500);
     }
   },
   methods: {
