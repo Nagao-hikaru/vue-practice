@@ -30,6 +30,12 @@
         <td>{{ b.price }}</td>
       </tr>
     </table>
+    <form action="">
+      <input type="button" value="変更" @click="onclick">
+    </form>
+    <ul>
+      <li v-for="item in list" :key="item">{{ item }}</li>
+    </ul>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>

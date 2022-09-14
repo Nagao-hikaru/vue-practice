@@ -33,6 +33,11 @@ Vue.createApp({
           title: 'ruby勉強',
           price: 2500,
         },
+      ],
+      list: [
+        '赤パジャマ',
+        '黄パジャマ',
+        '青パジャマ',
       ]
     };
   },
@@ -44,7 +49,7 @@ Vue.createApp({
       return Math.random();
     },
     expensiveBooks: function () {
-      
+
       return this.books.filter(b => b.price >= 2500);
     }
   },
@@ -53,6 +58,9 @@ Vue.createApp({
     },
     changeColor() {
       this.$refs.reftest.style.background = '#0FF'
+    },
+    onclick() {
+      this.list.shift();
     }
   },
   created() {
