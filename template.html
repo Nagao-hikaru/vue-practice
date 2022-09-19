@@ -4,49 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/template.css">
   <title>Vue.js</title>
 </head>
 <body>
   <div id="app">
-    <div ref='reftest'>
-      Refテストです。
-      <input type="text" v-model.lazy="name">
-      {{ name }}
-    </div>
-    <form action="">
-      <label for="show">表示/非表示</label>
-      <input type="checkbox" id="show" v-model="show">
-    </form>
-    <div id="panel" v-if="show">
-      <h3>RSSフィードについて</h3>
-      <div>WINGSでは、弊社執筆の書籍/雑誌/web記事の最新50件を。。。</div>
-    </div>
-    <div v-else>現在非表示です。</div>
-    <table class="table">
-      <th>ISBN</th><th>署名</th><th>価格</th>
-      <tr v-for="b in expensiveBooks">
-        <td>{{ b.isbn }}</td>
-        <td>{{ b.title }}</td>
-        <td>{{ b.price }}</td>
-      </tr>
-    </table>
-    <form action="">
-      <input type="button" value="変更" @click="onclick">
-    </form>
-    <ul>
-      <li v-for="item in list" :key="item">{{ item }}</li>
-    </ul>
     <br>
     <br>
-    <select name="" id="" v-model="attr">
-      <option value="height">高さ</option>
-      <option value="width">幅</option>
-    </select>
-    <input type="text" size="5" v-model="size"><br>
-    <img src="https://wings.msn.to/image/wings.jpg" :[attr]="size" alt="">
-    <div :style="{ backgroundColor: 'Aqua', fontSize: '1.5rem' }">
-      みなさんこんにちは
+    <div class="small" v-bind:class="{ color, frame: isChange }">
+      みなさん、こんにちは
     </div>
+    <p v-cloak>{{ message }}</p>
+    <div id="main" @contextmenu.prevent>
+      この領域は、コンテキストメニューではない
+    </div>
+    <input type="button" value="結果表示" @click.once="onClick">
+    <p>今日の運勢は、{{ result }}です</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>

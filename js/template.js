@@ -1,46 +1,10 @@
 Vue.createApp({
   data() {
     return {
-      message: 'みなさんこんにちは',
-      url: 'https://media.connec10.co.jp/',
-      email: 'Y-Suzuki@example.com',
-      current: new Date().toLocaleString(),
-      cur: new Date().toLocaleString(),
-      name: '',
-      os: [
-        'Windows',
-        'macOS',
-      ],
-      show: true,
-      books: [
-        {
-          isbn: '978',
-          title: 'Java勉強',
-          price: 2800,
-        },
-        {
-          isbn: '928',
-          title: 'python勉強',
-          price: 2501,
-        },
-        {
-          isbn: '9738',
-          title: 'php勉強',
-          price: 2400,
-        },
-        {
-          isbn: '958',
-          title: 'ruby勉強',
-          price: 2500,
-        },
-      ],
-      list: [
-        '赤パジャマ',
-        '黄パジャマ',
-        '青パジャマ',
-      ],
-      attr : 'width',
-      size : 100
+      color: true,
+      isChange: true,
+      message: 'hello',
+      result: '',
     };
   },
   computed: {
@@ -61,8 +25,8 @@ Vue.createApp({
     changeColor() {
       this.$refs.reftest.style.background = '#0FF'
     },
-    onclick() {
-      this.list.shift();
+    onClick() {
+      this.result = Math.floor(Math.random() * 100) + 1;
     }
   },
   created() {
