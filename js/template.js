@@ -38,7 +38,9 @@ Vue.createApp({
         '赤パジャマ',
         '黄パジャマ',
         '青パジャマ',
-      ]
+      ],
+      attr : 'width',
+      size : 100
     };
   },
   computed: {
