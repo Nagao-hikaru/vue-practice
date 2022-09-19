@@ -5,6 +5,7 @@ Vue.createApp({
       isChange: true,
       message: 'hello',
       result: '',
+      name: '匿名',
     };
   },
   computed: {
@@ -27,6 +28,18 @@ Vue.createApp({
     },
     onClick() {
       this.result = Math.floor(Math.random() * 100) + 1;
+    },
+    onParentClick() {
+      console.log('parent')
+    },
+    onMyClick() {
+      console.log('myclick')
+    },
+    onChildClick() {
+      console.log('child')
+    },
+    clear() {
+      this.name = '';
     }
   },
   created() {

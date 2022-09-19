@@ -9,17 +9,18 @@
 </head>
 <body>
   <div id="app">
-    <br>
-    <br>
-    <div class="small" v-bind:class="{ color, frame: isChange }">
-      みなさん、こんにちは
+    <div id="parent" @click="onParentClick">
+      親要素
+      <div id="my" @click.self="onMyClick">
+        現在要素
+        <div id="child" @click="onChildClick">
+          子要素
+        </div>
+      </div>
     </div>
-    <p v-cloak>{{ message }}</p>
-    <div id="main" @contextmenu.prevent>
-      この領域は、コンテキストメニューではない
-    </div>
-    <input type="button" value="結果表示" @click.once="onClick">
-    <p>今日の運勢は、{{ result }}です</p>
+    <label for="name">氏名:</label>
+    <input type="text" id="name" @keyup.escape="clear" v-model="name">
+    {{ name }}
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
