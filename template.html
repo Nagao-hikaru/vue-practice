@@ -9,20 +9,10 @@
 </head>
 <body>
   <div id="app">
-    <div id="parent" @click="onParentClick">
-      親要素
-      <div id="my" @click.self="onMyClick">
-        現在要素
-        <div id="child" @click="onChildClick">
-          子要素
-        </div>
-      </div>
-    </div>
-    <label for="name">氏名:</label>
-    <input type="text" id="name" @keyup.escape="clear" v-model="name">
-    {{ name }}
+    <my-hello></my-hello>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
+  <script src="js/component.js"></script>
 </body>
 </html>
