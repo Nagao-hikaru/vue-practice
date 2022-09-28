@@ -9,7 +9,10 @@
 </head>
 <body>
   <div id="app">
-    <my-parent></my-parent>
+    <p>現在値：{{ current }}</p>
+    <my-counter step="1" @plus-minus="onplus"></my-counter>
+    <my-counter step="2" @plus-minus="onplus"></my-counter>
+    <my-counter step="-1" @plus-minus="onplus"></my-counter>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
   <script src="js/template.js"></script>
