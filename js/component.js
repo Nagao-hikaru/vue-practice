@@ -1,22 +1,15 @@
 Vue.createApp({
-  data() {
-    return {
-      current: 0
-    }
-  },
-  methods: {
-    onplus(e) {
-      this.current += e;
-    }
-  }
 })
-  .component('my-counter', {
-    props: ['step'],
-    emits: ['plusMinus'],
-    template: '<button type="button" @click="onclick">{{ step }}</button>',
-    methods: {
-      onclick() {
-        this.$emit('plusMinus', Number(this.step));
-      }
-    }
+  .component('my-parent', {
+    provide: {
+      title: 'Vue 3実践入門'
+    },
+    template: '<div id="parent"><my-my /></div>'
+  })
+  .component('my-my', {
+    template: '<div id="my"><my-child /></div>'
+  })
+  .component('my-child', {
+    inject: ['title'],
+    template: '<div id="child">{{ title }}</div>'
   }).mount('#app')
