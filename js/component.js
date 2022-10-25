@@ -6,6 +6,9 @@ Vue.createApp({
     },
     template: '<div id="parent"><my-my /></div>'
   })
+  .component('my-hello', {
+    template: '<div>こんにていは<slot>ゲスト</slot>さん！</div>'
+  })
   .component('my-my', {
     template: '<div id="my"><my-child /></div>'
   })
